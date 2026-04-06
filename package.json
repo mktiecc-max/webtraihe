@@ -1,0 +1,8 @@
+{
+  "name": "ucmas-summer-camp-2026",
+  "version": "1.0.0",
+  "description": "Trại Hè Bán Trú UCMAS 2026 - Landing Page",
+  "scripts": {
+    "dev": "npx -y serve . -l 3000 --no-clipboard"
+  }
+}

@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quản Lý Thiết Kế — UCMAS Landing Page</title>
+  <link rel="icon" href="https://content.pancake.vn/1/s300x300/fwebp80/55/cf/37/da/14e20ac46ec4db8f31040763ac592a29ca40373940ca4e060ed074ce-w:757-h:671-l:121656-t:image/png.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+  <!-- Sidebar -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar__header">
+      <img src="https://content.pancake.vn/1/s300x300/fwebp80/55/cf/37/da/14e20ac46ec4db8f31040763ac592a29ca40373940ca4e060ed074ce-w:757-h:671-l:121656-t:image/png.png" alt="UCMAS" width="32">
+      <div>
+        <h1 class="sidebar__title">UCMAS Admin</h1>
+        <span class="sidebar__subtitle">Quản lý thiết kế</span>
+      </div>
+    </div>
+    <nav class="sidebar__nav">
+      <a href="#section-colors" class="nav-item active" data-section="colors">
+        <span class="nav-icon">🎨</span> Màu sắc & Branding
+      </a>
+      <a href="#section-hero" class="nav-item" data-section="hero">
+        <span class="nav-icon">🏠</span> Hero Section
+      </a>
+      <a href="#section-countdown" class="nav-item" data-section="countdown">
+        <span class="nav-icon">⏰</span> Countdown & Form
+      </a>
+      <a href="#section-activities" class="nav-item" data-section="activities">
+        <span class="nav-icon">🎪</span> Hoạt Động
+      </a>
+      <a href="#section-schedule" class="nav-item" data-section="schedule">
+        <span class="nav-icon">📋</span> Lịch Trình
+      </a>
+      <a href="#section-benefits" class="nav-item" data-section="benefits">
+        <span class="nav-icon">✅</span> Lợi Ích
+      </a>
+      <a href="#section-gallery" class="nav-item" data-section="gallery">
+        <span class="nav-icon">📸</span> Hình Ảnh
+      </a>
+      <a href="#section-pricing" class="nav-item" data-section="pricing">
+        <span class="nav-icon">💰</span> Bảng Giá
+      </a>
+      <a href="#section-testimonial" class="nav-item" data-section="testimonial">
+        <span class="nav-icon">💬</span> Đánh Giá
+      </a>
+      <a href="#section-footer" class="nav-item" data-section="footer">
+        <span class="nav-icon">📞</span> Footer & Liên Hệ
+      </a>
+    </nav>
+    <div class="sidebar__footer">
+      <a href="index.html" target="_blank" class="btn-preview">👁️ Xem Landing Page</a>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="main">
+    <!-- Top Bar -->
+    <header class="topbar">
+      <button class="topbar__burger" id="sidebarToggle">☰</button>
+      <h2 class="topbar__title" id="currentSectionTitle">Màu sắc & Branding</h2>
+      <div class="topbar__actions">
+        <button class="btn btn--ghost" id="btnReset">↺ Reset mặc định</button>
+        <button class="btn btn--ghost" id="btnExport">📤 Xuất cấu hình</button>
+        <button class="btn btn--ghost" id="btnImport">📥 Nhập cấu hình</button>
+        <button class="btn btn--save" id="btnSave">💾 Lưu thay đổi</button>
+      </div>
+    </header>
+
+    <div class="content">
+      <!-- ===== COLORS SECTION ===== -->
+      <section class="panel" id="section-colors">
+        <div class="panel__header">
+          <h3>🎨 Màu Sắc & Branding</h3>
+          <p>Tùy chỉnh bảng màu chủ đạo của landing page</p>
+        </div>
+        <div class="panel__body">
+          <div class="color-grid">
+            <div class="color-field">
+              <label>Navy (Header/Footer)</label>
+              <div class="color-input-wrap">
+                <input type="color" id="color-navy" value="#001F86">
+                <input type="text" id="color-navy-hex" value="#001F86" class="color-hex">
+              </div>
+            </div>
+            <div class="color-field">
+              <label>Xanh dương (Accent)</label>
+              <div class="color-input-wrap">
+                <input type="color" id="color-blue" value="#2383E0">
+                <input type="text" id="color-blue-hex" value="#2383E0" class="color-hex">
+              </div>
+            </div>
+            <div class="color-field">
+              <label>Đỏ (CTA chính)</label>
+              <div class="color-input-wrap">
+                <input type="color" id="color-red" value="#D40F00">
+                <input type="text" id="color-red-hex" value="#D40F00" class="color-hex">
+              </div>
+            </div>
+            <div class="color-field">
+              <label>Xanh lá (Secondary)</label>
+              <div class="color-input-wrap">
+                <input type="color" id="color-green" value="#006634">
+                <input type="text" id="color-green-hex" value="#006634" class="color-hex">
+              </div>
+            </div>
+            <div class="color-field">
+              <label>Vàng (Highlight)</label>
+              <div class="color-input-wrap">
+                <input type="color" id="color-yellow" value="#FFEF62">
+                <input type="text" id="color-yellow-hex" value="#FFEF62" class="color-hex">
+              </div>
+            </div>
+            <div class="color-field">
+              <label>Kem (Background)</label>
+              <div class="color-input-wrap">
+                <input type="color" id="color-cream" value="#FDFCE8">
+                <input type="text" id="color-cream-hex" value="#FDFCE8" class="color-hex">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== HERO SECTION ===== -->
+      <section class="panel" id="section-hero" style="display:none">
+        <div class="panel__header">
+          <h3>🏠 Hero Section</h3>
+          <p>Chỉnh sửa, sắp xếp các thành phần trong khu vực banner chính</p>
+        </div>
+        <div class="panel__body">
+          <p style="font-size:0.8rem;color:var(--text-muted);margin-bottom:16px;">Mỗi phần tử bên dưới tương ứng 1 thành phần trên Hero. Dùng nút ↑↓ để sắp xếp, 🗑 để xóa, hoặc chỉnh sửa nội dung, màu sắc, cỡ chữ.</p>
+          <div id="heroElementsEditor">
+            <!-- Populated by JS -->
+          </div>
+          <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:12px;">
+            <button class="btn btn--ghost btn--add" style="flex:1;min-width:200px;" id="addHeroText">+ Thêm dòng chữ</button>
+            <button class="btn btn--ghost btn--add" style="flex:1;min-width:200px;" id="addHeroImage">+ Thêm ảnh (URL)</button>
+            <button class="btn btn--ghost btn--add" style="flex:1;min-width:200px;" id="addHeroCTA">+ Thêm nút CTA</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== COUNTDOWN SECTION ===== -->
+      <section class="panel" id="section-countdown" style="display:none">
+        <div class="panel__header">
+          <h3>⏰ Countdown & Form Đăng Ký</h3>
+          <p>Cài đặt thời gian đếm ngược và thông tin form</p>
+        </div>
+        <div class="panel__body">
+          <div class="form-row two-col">
+            <div class="form-group">
+              <label>Ngày khai giảng</label>
+              <input type="datetime-local" id="countdown-date" value="2026-06-02T08:00">
+            </div>
+            <div class="form-group">
+              <label>Số suất ưu đãi còn lại</label>
+              <input type="number" id="countdown-spots" value="38" min="0" max="999">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Tiêu đề countdown</label>
+              <input type="text" id="countdown-title" value="Đếm Ngược Khai Giảng">
+            </div>
+          </div>
+          <h4 class="sub-heading">Quick Benefits (4 ô nhỏ)</h4>
+          <div id="quickBenefitsEditor">
+            <!-- Populated by JS -->
+          </div>
+          <button class="btn btn--ghost btn--add" id="addQuickBenefit">+ Thêm benefit</button>
+
+          <h4 class="sub-heading">Các cơ sở (dropdown)</h4>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Danh sách cơ sở (mỗi dòng: value|Tên hiển thị)</label>
+              <textarea id="centers-list" rows="6">q1|UCMAS Quận 1
+q3|UCMAS Quận 3
+q7|UCMAS Quận 7
+td|UCMAS Thủ Đức
+bt|UCMAS Bình Thạnh
+gv|UCMAS Gò Vấp
+bc|UCMAS Biên Hòa</textarea>
+            </div>
+          </div>
+
+          <h4 class="sub-heading">📝 Các trường trong Form Đăng Ký</h4>
+          <p style="font-size:0.8rem;color:var(--text-muted);margin-bottom:12px;">Thêm, xóa hoặc chỉnh sửa các trường nhập liệu. Loại "select" sẽ dùng danh sách cơ sở ở trên hoặc options tùy chỉnh.</p>
+          <div id="formFieldsEditor">
+            <!-- Populated by JS -->
+          </div>
+          <button class="btn btn--ghost btn--add" id="addFormField">+ Thêm trường mới</button>
+
+          <div class="form-row" style="margin-top:16px;">
+            <div class="form-group">
+              <label>Text nút Submit</label>
+              <input type="text" id="form-submit-text" value="🚀 Đăng Ký Ngay">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Ghi chú dưới nút (nhỏ)</label>
+              <input type="text" id="form-note-text" value="* Chúng tôi sẽ liên hệ xác nhận trong 24h">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== ACTIVITIES SECTION ===== -->
+      <section class="panel" id="section-activities" style="display:none">
+        <div class="panel__header">
+          <h3>🎪 Hoạt Động Trại Hè</h3>
+          <p>Quản lý các thẻ hoạt động trong carousel</p>
+        </div>
+        <div class="panel__body">
+          <div class="form-row two-col">
+            <div class="form-group">
+              <label>Tiêu đề section</label>
+              <input type="text" id="activities-title" value="Hoạt Động Trải Nghiệm">
+            </div>
+            <div class="form-group">
+              <label>Tag section</label>
+              <input type="text" id="activities-tag" value="🎪 Chương trình đặc sắc">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Mô tả section</label>
+              <textarea id="activities-desc" rows="2">Chương trình được thiết kế khoa học, kết hợp giữa học tập và vui chơi, giúp trẻ phát triển toàn diện</textarea>
+            </div>
+          </div>
+          <h4 class="sub-heading">Danh sách hoạt động</h4>
+          <div id="activitiesEditor">
+            <!-- Populated by JS -->
+          </div>
+          <button class="btn btn--ghost btn--add" id="addActivity">+ Thêm hoạt động</button>
+        </div>
+      </section>
+
+      <!-- ===== SCHEDULE SECTION ===== -->
+      <section class="panel" id="section-schedule" style="display:none">
+        <div class="panel__header">
+          <h3>📋 Lịch Trình Một Ngày</h3>
+          <p>Chỉnh sửa timeline lịch trình hoạt động</p>
+        </div>
+        <div class="panel__body">
+          <div class="form-row two-col">
+            <div class="form-group">
+              <label>Tiêu đề section</label>
+              <input type="text" id="schedule-title" value="Một Ngày Tại Trại Hè">
+            </div>
+            <div class="form-group">
+              <label>Mô tả section</label>
+              <input type="text" id="schedule-desc" value="Chương trình được sắp xếp khoa học, xen kẽ giữa học tập, vui chơi và nghỉ ngơi">
+            </div>
+          </div>
+          <h4 class="sub-heading">Các mốc thời gian</h4>
+          <div id="scheduleEditor">
+            <!-- Populated by JS -->
+          </div>
+          <button class="btn btn--ghost btn--add" id="addSchedule">+ Thêm mốc thời gian</button>
+        </div>
+      </section>
+
+      <!-- ===== BENEFITS SECTION ===== -->
+      <section class="panel" id="section-benefits" style="display:none">
+        <div class="panel__header">
+          <h3>✅ Lợi Ích & Ưu Điểm</h3>
+          <p>Chỉnh sửa 4 thẻ lợi ích "Tại sao chọn UCMAS"</p>
+        </div>
+        <div class="panel__body">
+          <div class="form-row">
+            <div class="form-group">
+              <label>Tiêu đề section</label>
+              <input type="text" id="benefits-title" value="Tại Sao Chọn UCMAS?">
+            </div>
+          </div>
+          <h4 class="sub-heading">Các lợi ích</h4>
+          <div id="benefitsEditor">
+            <!-- Populated by JS -->
+          </div>
+          <button class="btn btn--ghost btn--add" id="addBenefit">+ Thêm lợi ích</button>
+        </div>
+      </section>
+
+      <!-- ===== GALLERY SECTION ===== -->
+      <section class="panel" id="section-gallery" style="display:none">
+        <div class="panel__header">
+          <h3>📸 Thư Viện Hình Ảnh</h3>
+          <p>Quản lý hình ảnh gallery</p>
+        </div>
+        <div class="panel__body">
+          <div class="form-row">
+            <div class="form-group">
+              <label>Tiêu đề section</label>
+              <input type="text" id="gallery-title" value="Thư Viện Hình Ảnh">
+            </div>
+          </div>
+          <h4 class="sub-heading">Danh sách hình ảnh</h4>
+          <div id="galleryEditor">
+            <!-- Populated by JS -->
+          </div>
+          <button class="btn btn--ghost btn--add" id="addGalleryImage">+ Thêm hình ảnh</button>
+        </div>
+      </section>
+
+      <!-- ===== PRICING SECTION ===== -->
+      <section class="panel" id="section-pricing" style="display:none">
+        <div class="panel__header">
+          <h3>💰 Bảng Giá</h3>
+          <p>Chỉnh sửa các gói học phí và ưu đãi</p>
+        </div>
+        <div class="panel__body">
+          <div class="form-row">
+            <div class="form-group">
+              <label>Ghi chú cuối (ưu đãi nhóm)</label>
+              <input type="text" id="pricing-note" value="💡 Giảm thêm 10% khi đăng ký nhóm từ 3 bé trở lên — Liên hệ Hotline: 1900 636 225">
+            </div>
+          </div>
+          <h4 class="sub-heading">Các gói giá</h4>
+          <div id="pricingEditor">
+            <!-- Populated by JS -->
+          </div>
+          <button class="btn btn--ghost btn--add" id="addPricing">+ Thêm gói giá</button>
+        </div>
+      </section>
+
+      <!-- ===== TESTIMONIAL SECTION ===== -->
+      <section class="panel" id="section-testimonial" style="display:none">
+        <div class="panel__header">
+          <h3>💬 Đánh Giá Phụ Huynh</h3>
+          <p>Chỉnh sửa phần testimonial</p>
+        </div>
+        <div class="panel__body">
+          <div class="form-row">
+            <div class="form-group">
+              <label>URL ảnh đại diện</label>
+              <input type="url" id="testimonial-avatar" value="https://content.pancake.vn/1/s521x521/fwebp80/0e/6a/22/2a/910a8e8a9b685d9ca01bef5a839dd4c1a152127b9aa29b8087e1ed1b-w:1440-h:1440-l:128446-t:image/png.png">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Nội dung đánh giá</label>
+              <textarea id="testimonial-quote" rows="3">Con tôi sau 2 mùa hè tại UCMAS đã tự tin hơn rất nhiều, biết tự lập, tính toán nhanh và yêu thích vận động. Tôi hoàn toàn yên tâm khi gửi con ở đây.</textarea>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Tên tác giả</label>
+              <input type="text" id="testimonial-cite" value="— Phụ huynh bé Minh Khang, 8 tuổi, UCMAS Q.3">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== FOOTER SECTION ===== -->
+      <section class="panel" id="section-footer" style="display:none">
+        <div class="panel__header">
+          <h3>📞 Footer & Thông Tin Liên Hệ</h3>
+          <p>Chỉnh sửa footer, CTA cuối trang và thông tin liên hệ</p>
+        </div>
+        <div class="panel__body">
+          <h4 class="sub-heading">CTA cuối trang</h4>
+          <div class="form-row two-col">
+            <div class="form-group">
+              <label>Tiêu đề CTA</label>
+              <input type="text" id="footer-cta-title" value="Sẵn sàng cho một mùa hè đáng nhớ? 🌟">
+            </div>
+            <div class="form-group">
+              <label>Mô tả CTA</label>
+              <input type="text" id="footer-cta-desc" value="Đăng ký ngay hôm nay để nhận ưu đãi sớm và giữ chỗ cho con!">
+            </div>
+          </div>
+          <h4 class="sub-heading">Thông tin công ty</h4>
+          <div class="form-row two-col">
+            <div class="form-group">
+              <label>Tên công ty</label>
+              <input type="text" id="footer-company" value="UCMAS Việt Nam">
+            </div>
+            <div class="form-group">
+              <label>Mô tả công ty</label>
+              <input type="text" id="footer-about" value="Chương trình phát triển trí tuệ hàng đầu cho trẻ em, hiện diện tại hơn 80 quốc gia trên thế giới.">
+            </div>
+          </div>
+          <div class="form-row three-col">
+            <div class="form-group">
+              <label>Hotline</label>
+              <input type="text" id="footer-hotline" value="1900 636 225">
+            </div>
+            <div class="form-group">
+              <label>Email</label>
+              <input type="email" id="footer-email" value="info@ucmas.vn">
+            </div>
+            <div class="form-group">
+              <label>Website</label>
+              <input type="text" id="footer-website" value="ucmas.vn">
+            </div>
+          </div>
+          <h4 class="sub-heading">Mạng xã hội</h4>
+          <div class="form-row two-col">
+            <div class="form-group">
+              <label>Facebook URL</label>
+              <input type="url" id="footer-fb" value="#" placeholder="https://facebook.com/...">
+            </div>
+            <div class="form-group">
+              <label>YouTube URL</label>
+              <input type="url" id="footer-yt" value="#" placeholder="https://youtube.com/...">
+            </div>
+          </div>
+          <div class="form-row two-col">
+            <div class="form-group">
+              <label>Zalo URL</label>
+              <input type="url" id="footer-zalo" value="#" placeholder="https://zalo.me/...">
+            </div>
+            <div class="form-group">
+              <label>TikTok URL</label>
+              <input type="url" id="footer-tiktok" value="#" placeholder="https://tiktok.com/...">
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Toast -->
+  <div class="toast" id="toast">
+    <span class="toast-icon">✅</span>
+    <span class="toast-text">Đã lưu thành công!</span>
+  </div>
+
+  <!-- Import Modal -->
+  <div class="modal" id="importModal">
+    <div class="modal__backdrop"></div>
+    <div class="modal__content">
+      <h3>📥 Nhập Cấu Hình</h3>
+      <p>Dán JSON cấu hình vào bên dưới:</p>
+      <textarea id="importData" rows="10" placeholder='{"colors":{"navy":"#001F86",...}}'></textarea>
+      <div class="modal__actions">
+        <button class="btn btn--ghost" id="cancelImport">Hủy</button>
+        <button class="btn btn--save" id="confirmImport">Nhập & Áp dụng</button>
+      </div>
+    </div>
+  </div>
+
+  <input type="file" id="fileImport" accept=".json" style="display:none">
+
+  <script src="js/admin.js"></script>
+</body>
+</html>
