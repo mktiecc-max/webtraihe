@@ -3,6 +3,11 @@
    Dynamic content from Admin Panel config
    ========================================== */
 
+// ========== SUPABASE CONFIG ==========
+const supabaseUrl = 'YOUR_SUPABASE_URL';
+const supabaseKey = 'YOUR_SUPABASE_ANON_KEY';
+const supabase = (window.supabase) ? window.supabase.createClient(supabaseUrl, supabaseKey) : null;
+
 document.addEventListener('DOMContentLoaded', () => {
 
   // ========== LOAD CONFIG ==========
@@ -545,11 +550,28 @@ document.addEventListener('DOMContentLoaded', () => {
       submitBtn.disabled = true;
 
       try {
-        await new Promise(resolve => setTimeout(resolve, 1500));
+        if (supabase && supabaseUrl !== 'YOUR_SUPABASE_URL') {
+          const parentName = document.getElementById('parentName').value;
+          const phone = document.getElementById('phone').value;
+          const center = document.getElementById('center').value;
+          const childAge = document.getElementById('childAge') ? document.getElementById('childAge').value : '';
+          const message = document.getElementById('message') ? document.getElementById('message').value : '';
+          
+          const { error } = await supabase.from('leads').insert([
+            { parent_name: parentName, phone: phone, center: center, child_age: childAge, message: message }
+          ]);
+          
+          if (error) throw error;
+        } else {
+          // Fallback if Supabase is not configured yet
+          await new Promise(resolve => setTimeout(resolve, 1500));
+        }
+
         if (successModal) successModal.classList.add('active');
         registerForm.reset();
       } catch (error) {
-        alert('Có lỗi xảy ra. Vui lòng thử lại hoặc gọi Hotline.');
+        console.error('Supabase error:', error);
+        alert('Có lỗi xảy ra khi lưu dữ liệu. Vui lòng thử lại hoặc gọi Hotline.');
       } finally {
         submitBtn.innerHTML = originalText;
         submitBtn.disabled = false;
