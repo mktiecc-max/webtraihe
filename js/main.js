@@ -4,8 +4,8 @@
    ========================================== */
 
 // ========== SUPABASE CONFIG ==========
-const supabaseUrl = 'YOUR_SUPABASE_URL';
-const supabaseKey = 'YOUR_SUPABASE_ANON_KEY';
+const supabaseUrl = 'https://xarknokfcwomozfvdhud.supabase.co';
+const supabaseKey = 'YOUR_SUPABASE_ANON_KEY'; // QUAN TRỌNG: Hãy thay bằng Key đầy đủ mà bạn copy trên web
 const supabase = (window.supabase) ? window.supabase.createClient(supabaseUrl, supabaseKey) : null;
 
 document.addEventListener('DOMContentLoaded', () => {
